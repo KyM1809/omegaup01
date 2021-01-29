@@ -11,12 +11,13 @@ class Main {
     
     static Scanner Sc = new Scanner(System.in);
     static int C1 = 0;
+    static int N = 0;
     
     public static void main(String[] args) {
         
-        int n = Sc.nextInt();
+        N = Sc.nextInt();
         //System.out.print("" + FormulaFac1(n));
-        System.out.println("" + Fibonacci(n) + " " + C1);
+        System.out.println("" + Fibonacci(N) + " " + C1);
     }
     
     // 11456. Vector dominante
@@ -199,8 +200,12 @@ class Main {
     
     //
     //
-    
-    
+    public static void Lanzamiento(){
+        
+    }
+    public static void Lanzar(){
+        N = 0;
+    }
     
     
     //////////////////////////////////////////////////////////////
