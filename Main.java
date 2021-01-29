@@ -15,9 +15,10 @@ class Main {
     
     public static void main(String[] args) {
         
-        N = Sc.nextInt();
+        //N = Sc.nextInt();
         //System.out.print("" + FormulaFac1(n));
-        System.out.println("" + Fibonacci(N) + " " + C1);
+        //System.out.println("" + Fibonacci(N) + " " + C1);
+        Lanzamiento();
     }
     
     // 11456. Vector dominante
@@ -201,10 +202,20 @@ class Main {
     //
     //
     public static void Lanzamiento(){
-        
+        N = Sc.nextInt();
+        int v = 1;
+        for(int i = 0; i < N; i++){v *= 2;}
+        for(int i = 0; i < v; i++){
+            Combinacion(i, N);
+            System.out.println("");
+        }
     }
-    public static void Lanzar(){
-        N = 0;
+    public static void Combinacion(int i, int n){
+        if(n == 0) return;
+        char c;
+        c = n%2 ? 'X' : 'A';
+        Combinacion(i / 2, n - 1);
+        System.out.print("" + c);
     }
     
     
