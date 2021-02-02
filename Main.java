@@ -18,7 +18,8 @@ class Main {
         //N = Sc.nextInt();
         //System.out.print("" + FormulaFac1(n));
         //System.out.println("" + Fibonacci(N) + " " + C1);
-        Lanzamiento();
+        //Lanzamiento();
+        Palindromos();
     }
     
     // 11456. Vector dominante
@@ -199,8 +200,8 @@ class Main {
         }
     }
     
-    //
-    //
+    // 5097. Lanzamiento de moneda
+    // https://omegaup.com/arena/problem/Lanzamiento-de-moneda/#problems
     public static void Lanzamiento(){
         N = Sc.nextInt();
         int v = 1;
@@ -213,9 +214,37 @@ class Main {
     public static void Combinacion(int i, int n){
         if(n == 0) return;
         char c;
-        c = n%2 ? 'X' : 'A';
+        c = n%2 == 1 ? 'X' : 'A';
         Combinacion(i / 2, n - 1);
         System.out.print("" + c);
+    }
+    
+    //
+    //
+    public static void Palindromos(){
+        String Cad = "";
+        N = Sc.nextInt();
+        String [] C = new String[N];
+        for(int i = 0; i < N; i++){
+            C[i] = Cad = Sc.next();
+        }
+        
+        boolean Es = true;
+        for(int j = 0; j < N; j++){
+            Cad = C[j].toLowerCase();
+            Es = true;
+            for(int i = 0; i < Cad.length(); i++){
+                if(Cad.charAt(i) == Cad.charAt(Cad.length() - i - 1)){
+                }else{
+                    Es = false;
+                }
+            }
+            if(Es){
+                System.out.println("Si");
+            }else{
+                System.out.println("No");
+            }
+        }
     }
     
     
