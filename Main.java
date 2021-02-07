@@ -8,6 +8,8 @@ class Main {
     static Scanner Sc = new Scanner(System.in);
     static int C1 = 0;
     static int N = 0;
+    static int N1 = 0;
+    static int N2 = 0;
     
     public static void main(String[] args) {
         P1229();
@@ -367,6 +369,15 @@ class Main {
     
     // 9454. Duplicados y ordenamiento
     // https://omegaup.com/arena/problem/Duplicados-y-ordenamiento/
+    public static void P9454(){
+        N = Sc.nextInt();
+        int [] Arr = new int[N];
+        int [] Arr2 = new int[N];
+        for(int i = 0; i < N; i++){
+            Arr[i] = Sc.nextInt();
+        }
+        Radix(Arr);
+    }
     
     public static void RadixAbs(int [] Arr){
         int x, i , j;
