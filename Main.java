@@ -318,6 +318,17 @@ class Main {
         System.out.println("" + n3);
     }
     
+    // 773. 1 Ordena a los alumnos
+    // https://omegaup.com/arena/problem/1-Ordena-un-arreglo/
+    public static void P773(){
+        N = Sc.nextInt();
+        int [] Arr = new int[N];
+        for(int i = 0; i < N; i++){
+            Arr[i] = Sc.nextInt();
+        }
+        Radix(Arr);
+    }
+    
     public static void Radix(int [] Arr){
         int x, i , j;
         for(x = Integer.SIZE - 1; x>= 0; x--){
