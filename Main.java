@@ -3,10 +3,6 @@ package omegaup01;
 
 import java.util.Scanner;
 
-/**
- *
- * @author User37
- */
 class Main {
     
     static Scanner Sc = new Scanner(System.in);
@@ -14,11 +10,6 @@ class Main {
     static int N = 0;
     
     public static void main(String[] args) {
-        
-        //N = Sc.nextInt();
-        //System.out.print("" + FormulaFac1(n));
-        //System.out.println("" + Fibonacci(N) + " " + C1);
-        //Lanzamiento();
         P3981();
     }
     
@@ -285,7 +276,17 @@ class Main {
         Radix(Arr);
     }
     
-    //Metodo Radix
+    // 10688. Ordenamiento Vector Enteros
+    // https://omegaup.com/arena/problem/Ordenamiento-Vector-Enteros/
+    public static void P10688(){
+        N = Sc.nextInt();
+        int [] Arr = new int[N];
+        for(int i = 0; i < N; i++){
+            Arr[i] = Sc.nextInt();
+        }
+        Radix(Arr);
+    }
+    
     public static void Radix(int [] Arr){
         int x, i , j;
         for(x = Integer.SIZE - 1; x>= 0; x--){
