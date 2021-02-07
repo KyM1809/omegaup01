@@ -10,7 +10,7 @@ class Main {
     static int N = 0;
     
     public static void main(String[] args) {
-        P7343();
+        P773();
     }
     
     // 11456. Vector dominante
@@ -348,12 +348,19 @@ class Main {
             }
             Arr = Aux;
         }
-        MostrarArreglo(Arr);
+        MostrarArregloInv(Arr);
     }
     
     public static void MostrarArreglo(int [] Arr){
         for(int i = 0; i < Arr.length; i++){
-            System.out.println(+ Arr[i]);
+            System.out.println("" + Arr[i]);
+        }
+        System.out.println("");
+    }
+    
+    public static void MostrarArregloInv(int [] Arr){
+        for(int i = Arr.length - 1; i >= 0 ; i--){
+            System.out.println("" + Arr[i]);
         }
         System.out.println("");
     }
