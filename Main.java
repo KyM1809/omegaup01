@@ -19,7 +19,7 @@ class Main {
         //System.out.print("" + FormulaFac1(n));
         //System.out.println("" + Fibonacci(N) + " " + C1);
         //Lanzamiento();
-        Palindromos();
+        P3981();
     }
     
     // 11456. Vector dominante
@@ -262,6 +262,57 @@ class Main {
         int B = Sc.nextInt();
         
         System.out.println("" + Math.abs( A + B ));
+    }
+    
+    
+    
+    
+    //////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////
+    //////////////////////U5 ORDENAMIENTO/////////////////////////
+    //////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////
+    
+    
+    // 3981. Ordena Básico 2
+    // https://omegaup.com/arena/problem/Ordena-Basico-2/
+    public static void P3981(){
+        N = Sc.nextInt();
+        int [] Arr = new int[N];
+        for(int i = 0; i < N; i++){
+            Arr[i] = Sc.nextInt();
+        }
+        Radix(Arr);
+    }
+    
+    //Metodo Radix
+    public static void Radix(int [] Arr){
+        int x, i , j;
+        for(x = Integer.SIZE - 1; x>= 0; x--){
+            int Aux[] = new int[Arr.length];
+            j = 0;
+            for(i = 0; i < Arr.length; i++){
+                boolean Mover = Arr[i] << x >= 0;
+                if(x == 0 ? !Mover : Mover){
+                    Aux[j] = Arr[i];
+                    j++;
+                }else{
+                    Arr[i - j] = Arr[i];
+                }
+            }
+            for(i = j; i < Aux.length; i++){
+                Aux[i] = Arr[i - j];
+            }
+            Arr = Aux;
+        }
+        MostrarArreglo(Arr);
+    }
+    
+    public static void MostrarArreglo(int [] Arr){
+        for(int i = Arr.length - 1; i >= 0; i--){
+            System.out.println(+ Arr[i]);
+        }
+        System.out.println("");
     }
     
 }
