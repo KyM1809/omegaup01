@@ -340,6 +340,34 @@ class Main {
         Radix(Arr);
     }
     
+    // 12053. Ordenando por magnitud
+    // https://omegaup.com/arena/problem/Ordenando-por-magnitud/#problems
+    public static void P12053(){
+        
+    }
+    
+    public static void RadixAbs(int [] Arr){
+        int x, i , j;
+        for(x = Integer.SIZE - 1; x>= 0; x--){
+            int Aux[] = new int[Arr.length];
+            j = 0;
+            for(i = 0; i < Arr.length; i++){
+                boolean Mover = Math.abs(Arr[i]) << x >= 0;
+                if(x == 0 ? !Mover : Mover){
+                    Aux[j] = Arr[i];
+                    j++;
+                }else{
+                    Arr[i - j] = Arr[i];
+                }
+            }
+            for(i = j; i < Aux.length; i++){
+                Aux[i] = Arr[i - j];
+            }
+            Arr = Aux;
+        }
+        MostrarArreglo(Arr);
+    }
+    
     public static void Radix(int [] Arr){
         int x, i , j;
         for(x = Integer.SIZE - 1; x>= 0; x--){
