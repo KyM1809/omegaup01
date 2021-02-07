@@ -329,6 +329,12 @@ class Main {
         Radix(Arr);
     }
     
+    // 2797. Ordenando Dígitos
+    // https://omegaup.com/arena/problem/Ordenando-Digitos/
+    public static void P2797(){
+        
+    }
+    
     public static void Radix(int [] Arr){
         int x, i , j;
         for(x = Integer.SIZE - 1; x>= 0; x--){
@@ -357,7 +363,6 @@ class Main {
         }
         System.out.println("");
     }
-    
     public static void MostrarArregloInv(int [] Arr){
         for(int i = Arr.length - 1; i >= 0 ; i--){
             System.out.println("" + Arr[i]);
