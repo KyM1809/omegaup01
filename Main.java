@@ -10,7 +10,7 @@ class Main {
     static int N = 0;
     
     public static void main(String[] args) {
-        P3981();
+        P10688();
     }
     
     // 11456. Vector dominante
@@ -287,6 +287,12 @@ class Main {
         Radix(Arr);
     }
     
+    // 7343. Ordenar de mayor a menor tres números
+    // https://omegaup.com/arena/problem/Ordenar-Mayor-a-menor-3-numeros/
+    public static void P7343(){
+        
+    }
+    
     public static void Radix(int [] Arr){
         int x, i , j;
         for(x = Integer.SIZE - 1; x>= 0; x--){
@@ -310,7 +316,7 @@ class Main {
     }
     
     public static void MostrarArreglo(int [] Arr){
-        for(int i = Arr.length - 1; i >= 0; i--){
+        for(int i = 0; i < Arr.length; i++){
             System.out.println(+ Arr[i]);
         }
         System.out.println("");
