@@ -10,7 +10,7 @@ class Main {
     static int N = 0;
     
     public static void main(String[] args) {
-        P12053();
+        P1229();
     }
     
     // 11456. Vector dominante
@@ -389,7 +389,6 @@ class Main {
         }
         MostrarArreglo(Arr);
     }
-    
     public static void Radix(int [] Arr){
         int x, i , j;
         for(x = Integer.SIZE - 1; x>= 0; x--){
