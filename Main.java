@@ -351,6 +351,23 @@ class Main {
         RadixAbs(Arr);
     }
     
+    // 12054. Ordenando por distancia al origen
+    // https://omegaup.com/arena/problem/Ordenando-por-distancia-al-orige/
+    
+    // 1229. Ordenar
+    // https://omegaup.com/arena/problem/Ordenar/
+    public static void P1229(){
+        N = Sc.nextInt();
+        int [] Arr = new int[N];
+        for(int i = 0; i < N; i++){
+            Arr[i] = Sc.nextInt();
+        }
+        Radix(Arr);
+    }
+    
+    // 9454. Duplicados y ordenamiento
+    // https://omegaup.com/arena/problem/Duplicados-y-ordenamiento/
+    
     public static void RadixAbs(int [] Arr){
         int x, i , j;
         for(x = Integer.SIZE - 1; x>= 0; x--){
