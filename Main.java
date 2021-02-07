@@ -10,7 +10,7 @@ class Main {
     static int N = 0;
     
     public static void main(String[] args) {
-        P773();
+        P2797();
     }
     
     // 11456. Vector dominante
@@ -332,7 +332,12 @@ class Main {
     // 2797. Ordenando Dígitos
     // https://omegaup.com/arena/problem/Ordenando-Digitos/
     public static void P2797(){
-        
+        N = Sc.nextInt();
+        int [] Arr = new int[N];
+        for(int i = 0; i < N; i++){
+            Arr[i] = Sc.nextInt();
+        }
+        Radix(Arr);
     }
     
     public static void Radix(int [] Arr){
@@ -354,7 +359,7 @@ class Main {
             }
             Arr = Aux;
         }
-        MostrarArregloInv(Arr);
+        MostrarArreglo(Arr);
     }
     
     public static void MostrarArreglo(int [] Arr){
