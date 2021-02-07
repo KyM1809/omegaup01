@@ -13,7 +13,7 @@ class Main {
     static int N2 = 0;
     
     public static void main(String[] args) {
-        P9454();
+        P1870();
     }
     
     // 11456. Vector dominante
@@ -403,7 +403,34 @@ class Main {
     // 1870. Las montañas destruidas por Gilgamesh
     // https://omegaup.com/arena/problem/montanas/
     public static void P1870(){
+        N = Sc.nextInt();
+        int [] Arr = new int[N];
+        String [] SArr = new String[N];
         
+        for(int i = 0; i < N; i++){
+            Arr[i] = Sc.nextInt();
+            SArr[i] = Sc.next();
+        }
+        
+        int Aux = 0;
+        String SAux = "";
+        for(int i = 1; i < N; ++i) {
+            for(int j = 0; j < (N - i); j++) {
+                if(Arr[j] > Arr[j+1]){
+                    Aux = Arr[j];
+                    Arr[j] = Arr[j + 1];
+                    Arr[j + 1] = Aux;
+                    
+                    SAux = SArr[j];
+                    SArr[j] = SArr[j + 1];
+                    SArr[j + 1] = SAux;
+                }
+            }
+        }
+        
+        for(int i = 0; i < N; i++){
+            System.out.println(SArr[i]);
+        }
     }
     
     public static void RadixAbs(int [] Arr){
