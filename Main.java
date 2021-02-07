@@ -10,7 +10,7 @@ class Main {
     static int N = 0;
     
     public static void main(String[] args) {
-        P2797();
+        P12053();
     }
     
     // 11456. Vector dominante
@@ -343,7 +343,12 @@ class Main {
     // 12053. Ordenando por magnitud
     // https://omegaup.com/arena/problem/Ordenando-por-magnitud/#problems
     public static void P12053(){
-        
+        N = Sc.nextInt();
+        int [] Arr = new int[N];
+        for(int i = 0; i < N; i++){
+            Arr[i] = Sc.nextInt();
+        }
+        RadixAbs(Arr);
     }
     
     public static void RadixAbs(int [] Arr){
@@ -392,7 +397,7 @@ class Main {
     
     public static void MostrarArreglo(int [] Arr){
         for(int i = 0; i < Arr.length; i++){
-            System.out.println("" + Arr[i]);
+            System.out.print(Arr[i] + " ");
         }
         System.out.println("");
     }
