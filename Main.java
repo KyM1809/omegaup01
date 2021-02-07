@@ -7,6 +7,7 @@ class Main {
     
     static Scanner Sc = new Scanner(System.in);
     static int C1 = 0;
+    static int C2 = 0;
     static int N = 0;
     static int N1 = 0;
     static int N2 = 0;
@@ -374,9 +375,26 @@ class Main {
         int [] Arr = new int[N];
         int [] Arr2 = new int[N];
         for(int i = 0; i < N; i++){
+            Arr2[i] = 0;
             Arr[i] = Sc.nextInt();
         }
-        Radix(Arr);
+        N1 = 0;
+        boolean Existe = false;
+        for(int i = 0; i < N; i++){
+            Existe = false;
+            for(int j = 0; j < N; j++){
+                if(Arr2[i] == Arr[j]){
+                    Existe = true;
+                }
+            }
+            if(!Existe){
+                Arr2[N1] = Arr[i];
+                ++N1;
+            }
+        }
+        int [] Arr3 = new int[N1];
+        for(int i = 0; i < N1; i++)
+        Radix(Arr3);
     }
     
     public static void RadixAbs(int [] Arr){
